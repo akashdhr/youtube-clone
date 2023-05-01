@@ -3,8 +3,6 @@ import axios from 'axios';
 const BASE_URL = 'https://youtube-v31.p.rapidapi.com/captions';
 
 const options = {
-  method: 'GET',
-  url: BASE_URL,
   params: {
     part: 'snippet',
     videoId: 'M7FIvfx5J10'
