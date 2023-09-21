@@ -7,14 +7,13 @@ const options = {
     maxResults: 50,
   },
   headers: {
-    //'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-    'X-RapidAPI-Key': '741b3e4962mshf478c1c3af6b07ep11c51fjsna09706c544ea',
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
   },
 };
 
 export const fetchFromAPI = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`, options);
-
+  console.log("APi key: "+ process.env.REACT_APP_RAPID_API_KEY);
   return data;
 };
